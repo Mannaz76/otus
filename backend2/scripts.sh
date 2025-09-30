@@ -4,4 +4,4 @@ apt update
 
 apt install apache2 -y
 
-cp ./index.html /var/www/html/
+cp ./backend2/ndex.html /var/www/html/
