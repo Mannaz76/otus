@@ -14,9 +14,9 @@ mysql << EOF
 
 CREATE USER repl@'%' IDENTIFIED WITH 'caching_sha2_password' BY 'oTUSlave#2020';
 GRANT REPLICATION SLAVE ON *.* TO repl@'%';
-CREATE DATABASE sakila;
+CREATE DATABASE otus;
 EOF
 
-mysql sakila < ./otus/db_master/sakila-data.sql
+mysql otus < ./otus/db_master/otus.sql
 
 
