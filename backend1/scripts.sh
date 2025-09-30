@@ -4,4 +4,4 @@ apt update
 
 apt install apache2 -y
 
-cp ./backend1/index.html /var/www/html/
+cp ~/otus/backend1/index.html /var/www/html/

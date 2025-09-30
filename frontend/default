@@ -20,8 +20,8 @@
 #
 
 upstream backend {
-        server 192.168.11.12;
-        server 192.168.11.14;
+        server 192.168.11.21;
+        server 192.168.11.22;
 }
 
 
