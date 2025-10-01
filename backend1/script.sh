@@ -2,6 +2,6 @@
 
 apt update
 
-apt install apache2 -y
+apt install apache2 prometheus-node-exporter -y
 
 cp ./otus/backend1/index.html /var/www/html/
