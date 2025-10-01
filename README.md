@@ -61,6 +61,36 @@
    git clone https://github.com/Mannaz76/otus.git
    sudo bash ./otus/backend2/script.sh
 
+## dbmaster
+1. Развернуть VM  на базе образа **ubuntu-24.04.3-live-server-amd64.iso** (20 GB Disk size, 2 Cores CPU, 2048 MiB Memory, vmbr0 Bridge Network)
+
+2. Назначить ей статический ip адресс **192.168.11.23** через netplan
+
+3. Назначить hostname **dbmaster**
+   ```bash
+   sudo hostnamectl set-hostname db_master
+   sudo reboot
+
+4. Клонируем репозиторий и запускаем скрипт
+   ```bash
+   git clone https://github.com/Mannaz76/otus.git
+   sudo bash ./otus/db_master/script.sh
+
+## db_slave
+1. Развернуть VM  на базе образа **ubuntu-24.04.3-live-server-amd64.iso** (20 GB Disk size, 2 Cores CPU, 2048 MiB Memory, vmbr0 Bridge Network)
+
+2. Назначить ей статический ip адресс **192.168.11.23** через netplan
+
+3. Назначить hostname **dbslave**
+   ```bash
+   sudo hostnamectl set-hostname dbslave
+   sudo reboot
+
+4. Клонируем репозиторий и запускаем скрипт
+   ```bash
+   git clone https://github.com/Mannaz76/otus.git
+   sudo bash ./otus/db_slave/script.sh
+
 ## Monitoring prometheus+grafana
 
 1. Развернуть VM  на базе образа **ubuntu-24.04.3-live-server-amd64.iso** (20 GB Disk size, 2 Cores CPU, 2048 MiB Memory, vmbr0 Bridge Network)
