@@ -26,9 +26,6 @@ $password
 $password
 EOF
 
-systemctl daemon-reload
-systemctl enable --now kibana.service
-
 cp ./otus/elk/kibana.yml /etc/kibana/
 
 # Проверка конфигурации
