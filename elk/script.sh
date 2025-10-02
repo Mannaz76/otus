@@ -3,7 +3,7 @@
 password=$1
 
 #обновляем репо и уcтанавливаем mysql
-apt update && apt install default-jbk nginx -y
+apt update && apt install default-jdk nginx -y
 
 
 dpkg -i ./otus/elk/*.deb
