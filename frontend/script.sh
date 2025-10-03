@@ -8,6 +8,6 @@ nginx -t && systemctl reload nginx
 
 dpkg -i ./otus/frontend/*.deb
 
-cp /otus/frontend/filebeat.yml /etc/filebeat/
+cp ./otus/frontend/filebeat.yml /etc/filebeat/
 
 systemctl restart filebeat
