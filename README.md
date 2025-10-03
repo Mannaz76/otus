@@ -2,6 +2,7 @@
 В данном Readme описанна инструкция по реализации плана аварийного восстановления web проекта с двумя backend, 
 одним frontend с балансировкой Round-robin и централизованого моиторинга и сбора логов.
 
+
 ## frontend
 1. Развернуть VM  на базе образа **ubuntu-24.04.3-live-server-amd64.iso** (20 GB Disk size, 2 Cores CPU, 2048 MiB Memory, vmbr0 Bridge Network)
    
