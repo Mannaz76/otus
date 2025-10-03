@@ -87,6 +87,8 @@ systemctl restart logstash.service
 # Генеририруем токен
 /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana > elasticsearch-token
 
+sleep 10
+
 # Код верификации
 /usr/share/kibana/bin/kibana-verification-code > kibana-verification-code
 
