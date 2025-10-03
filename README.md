@@ -79,7 +79,7 @@
 ## db_slave
 1. Развернуть VM  на базе образа **ubuntu-24.04.3-live-server-amd64.iso** (20 GB Disk size, 2 Cores CPU, 2048 MiB Memory, vmbr0 Bridge Network)
 
-2. Назначить ей статический ip адресс **192.168.11.23** через netplan
+2. Назначить ей статический ip адресс **192.168.11.24** через netplan
 
 3. Назначить hostname **dbslave**
    ```bash
@@ -112,6 +112,47 @@
    http://192.168.11.24:3000
    ```
    пароль и логин по дефолту **admin** 
+
+6. Добавляем источник данны
+   - переходим в раздел **Connections** -> **Data Sourse**
+   - нажимаем кнопку **Add data source**
+   - выбираем из списка **Prometheus**
+   - в разделе **Connection поле** **Prometheus server URL**  указываем **http://localhost:9090**
+   - нажимаем кнопку **Save & test**
+
+7. Добавляем Dashbord
+   - переходим в раздел **Dashboards**
+   - нажимаем кнопку **NEW** в выпадающем списке выбираем **Import**
+   - в поле **Find and import dashboards for common applications at** указываем id **1860** и нажимаем **Load**
+   - в следующем окне нажимаем кнопку **Import**
+
+8. Проверяем работоспасобность
+
+## Logging elk
+
+1. Развернуть VM  на базе образа **ubuntu-24.04.3-live-server-amd64.iso** (20 GB Disk size, 2 Cores CPU, **10240** MiB Memory, vmbr0 Bridge Network)
+
+2. Назначить ей статический ip адресс **192.168.11.26** через netplan
+
+3. Назначить hostname **elk**
+   ```bash
+   sudo hostnamectl set-hostname monitiring
+   sudo reboot
+
+4. Клонируем репозиторий
+   ```bash
+   git clone https://github.com/Mannaz76/otus.git
+   sudo bash ./otus/elk/script.sh
+
+5. Запускаем скрипт с указанием пароля для входа в elastic (заменить password на свой)
+   ```bash
+   sudo bash ./otus/elk/script.sh password
+
+5. Переходим в web интерфейс elastic в браузере по ip:
+   
+   http://192.168.11.26:5601
+   
+   пароль и логин по дефолту **** 
 
 6. Добавляем источник данны
    - переходим в раздел **Connections** -> **Data Sourse**
