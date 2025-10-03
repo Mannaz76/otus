@@ -84,7 +84,7 @@ path.logs: /var/log/elasticsearch
 #----------------------- BEGIN SECURITY AUTO CONFIGURATION -----------------------
 #
 # The following settings, TLS certificates, and keys have been automatically      
-# generated to configure Elasticsearch security features on 01-10-2025 12:11:19
+# generated to configure Elasticsearch security features on 03-10-2025 10:16:39
 #
 # --------------------------------------------------------------------------------
 
@@ -116,7 +116,6 @@ transport.host: 0.0.0.0
 
 # Allow other nodes to join the cluster from anywhere
 # Connections are encrypted and mutually authenticated
-
-
+#transport.host: 0.0.0.0
 
 #----------------------- END SECURITY AUTO CONFIGURATION -------------------------
