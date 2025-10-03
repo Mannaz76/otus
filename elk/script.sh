@@ -33,12 +33,6 @@ cp ./otus/elk/kibana.yml /etc/kibana/
 
 systemctl restart kibana
 
-# Генеририруем токен
-/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana > elasticsearch-token
-
-# Код верификации
-/usr/share/kibana/bin/kibana-verification-code > kibana-verification-code
-
 # Настройка Logstash
 systemctl enable --now logstash.service
 
@@ -89,6 +83,12 @@ EOF
 
 
 systemctl restart logstash.service
+
+# Генеририруем токен
+/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana > elasticsearch-token
+
+# Код верификации
+/usr/share/kibana/bin/kibana-verification-code > kibana-verification-code
 
 
 
