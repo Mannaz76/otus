@@ -27,9 +27,12 @@
    sudo hostnamectl set-hostname frontend
    sudo reboot
 
-4. Клонируем репозиторий и запускаем скрипт
+4. Клонируем репозиторий
    ```bash
    git clone https://github.com/Mannaz76/otus.git
+
+5. Запускаем скрипт
+   ```bash
    sudo bash ./otus/frontend/script.sh
 
 ## backend1
@@ -41,9 +44,12 @@
    sudo hostnamectl set-hostname backend1
    sudo reboot
 
-4. Клонируем репозиторий и запускаем скрипт
+4. Клонируем репозиторий
    ```bash
    git clone https://github.com/Mannaz76/otus.git
+
+5. Запускаем скрипт
+   ```bash
    sudo bash ./otus/backend1/script.sh
 
 
@@ -57,9 +63,12 @@
    sudo hostnamectl set-hostname backend2
    sudo reboot
 
-4. Клонируем репозиторий и запускаем скрипт
+4. Клонируем репозиторий
    ```bash
    git clone https://github.com/Mannaz76/otus.git
+
+5. Запускаем скрипт
+   ```bash
    sudo bash ./otus/backend2/script.sh
 
 ## dbmaster
@@ -72,9 +81,12 @@
    sudo hostnamectl set-hostname db_master
    sudo reboot
 
-4. Клонируем репозиторий и запускаем скрипт
+4. Клонируем репозиторий
    ```bash
    git clone https://github.com/Mannaz76/otus.git
+
+5. Запускаем скрипт
+   ```bash
    sudo bash ./otus/db_master/script.sh
 
 ## db_slave
@@ -87,9 +99,12 @@
    sudo hostnamectl set-hostname dbslave
    sudo reboot
 
-4. Клонируем репозиторий и запускаем скрипт
+4. Клонируем репозиторий
    ```bash
    git clone https://github.com/Mannaz76/otus.git
+
+5. Запускаем скрипт
+   ```bash
    sudo bash ./otus/db_slave/script.sh
 
 ## Monitoring prometheus+grafana
@@ -103,31 +118,34 @@
    sudo hostnamectl set-hostname monitiring
    sudo reboot
 
-4. Клонируем репозиторий и запускаем скрипт
+4. Клонируем репозиторий
    ```bash
    git clone https://github.com/Mannaz76/otus.git
+
+5. Запускаем скрипт
+   ```bash
    sudo bash ./otus/monitoring/script.sh
 
-5. Переходим в web интерфейс grafana в браузере по ip:
+6. Переходим в web интерфейс grafana в браузере по ip:
    ```
    http://192.168.11.24:3000
    ```
    пароль и логин по дефолту **admin** 
 
-6. Добавляем источник данны
+7. Добавляем источник данны
    - переходим в раздел **Connections** -> **Data Sourse**
    - нажимаем кнопку **Add data source**
    - выбираем из списка **Prometheus**
    - в разделе **Connection поле** **Prometheus server URL**  указываем **http://localhost:9090**
    - нажимаем кнопку **Save & test**
 
-7. Добавляем Dashbord
+8. Добавляем Dashbord
    - переходим в раздел **Dashboards**
    - нажимаем кнопку **NEW** в выпадающем списке выбираем **Import**
    - в поле **Find and import dashboards for common applications at** указываем id **1860** и нажимаем **Load**
    - в следующем окне нажимаем кнопку **Import**
 
-8. Проверяем работоспасобность
+9. Проверяем работоспасобность
 
 ## Logging elk
 
@@ -143,30 +161,29 @@
 4. Клонируем репозиторий
    ```bash
    git clone https://github.com/Mannaz76/otus.git
-   sudo bash ./otus/elk/script.sh
 
 5. Запускаем скрипт с указанием пароля для входа в elastic (заменить 1234567 на свой)
    ```bash
    sudo bash ./otus/elk/script.sh 1234567
 
-5. Переходим в web интерфейс elastic в браузере по ip:
+6. Переходим в web интерфейс elastic в браузере по ip:
    
    http://192.168.11.26:5601
 
-6. В браузере в поле **Enrollment token** копируем и вводим токен из файла **elasticsearch-token**
+7. В браузере в поле **Enrollment token** копируем и вводим токен из файла **elasticsearch-token**
    ```bash
    cat elasticsearch-token
 
-7. В браузере в поле **Verification required** копирум и вводим код из файла **kibana-verification-code** и нажимаем кнопку **Verify**
+8. В браузере в поле **Verification required** копирум и вводим код из файла **kibana-verification-code** и нажимаем кнопку **Verify**
     ```bash
    cat kibana-verification-code
   
-8.  Входим в систему, логин **elastic** пароль тот что задавали при старте скрипта в п.5
+9.  Входим в систему, логин **elastic** пароль тот что задавали при старте скрипта в п.5
 
-9. Проверяем наличе индексов
+10. Проверяем наличе индексов
    -раздел Managment -> stack Managment -> раздел Data -> Index Managment
   
-10. Добавляем Discover
+11. Добавляем Discover
    - переходим в раздел **Analytics** -> **Discover**
    - нажимаем кнопку **Create data view**
    - в поле **Nginx** указываем произвольное имя, в нашем случае **Nginx-front**
@@ -174,11 +191,11 @@
    - нажимаем кнопку **Save data view to Kibana**
    - в следующем окне нажимаем кнопку **Import**
 
-11. Добавляем Dashboards
+12. Добавляем Dashboards
    - нажимаем кнопку **Create dashboards**
    - нажимаем кнопку **Create visualization**
    - в левой части добавляем поля граффика
    - в правой части выбираем тип визуалиции , добавляем данные на оси
    - сохраняем нажатием кнопки **Save and return**
 
-9. Проверяем работоспасобность
+13. Проверяем работоспасобность
