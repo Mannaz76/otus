@@ -1,7 +1,11 @@
 #!/bin/bash
 
-#обновляем репо и уcтанавливаем mysql
-apt update && apt install -y prometheus adduser libfontconfig1 musl
+
+apt update && apt install -y prometheus adduser libfontconfig1 musl nfs-common
+
+mkdir ./nas
+
+mount 192.168.11.27:/srv/nfs ./nas
 
 dpkg -i ./nas/grafana/grafana_11.2.2_amd64-224190-264c1b.deb
 
