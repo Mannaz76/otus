@@ -3,8 +3,11 @@
 password=$1
 
 #обновляем репо и уcтанавливаем mysql
-apt update && apt install default-jdk nginx -y
+apt update && apt install default-jdk nginx nfs-common -y
 
+mkdir ./nas
+
+mount 192.168.11.27:/srv/nfs ./nas
 
 dpkg -i ./nas/elk/elasticsearch_8.17.1_amd64.deb
 dpkg -i ./nas/elk/kibana_8.17.1_amd64.deb
