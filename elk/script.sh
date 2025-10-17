@@ -6,7 +6,9 @@ password=$1
 apt update && apt install default-jdk nginx -y
 
 
-dpkg -i ./otus/elk/*.deb
+dpkg -i ./nas/elk/elasticsearch_8.17.1_amd64.deb
+dpkg -i ./nas/elk/kibana_8.17.1_amd64.deb
+dpkg -i ./nas/elk/logstash_8.17.1_amd64.deb
 
 # Задаем лимиты памяти вля виртуальной машины Java
 cp ./otus/elk/jvm.options /etc/elasticsearch/jvm.options.d/
