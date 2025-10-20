@@ -111,7 +111,7 @@
    ```bash
    sudo bash ./otus/db_slave/script.sh
 
-6. Проверяет статус мастера
+6. Проверяет статус реплики
    ```
    SHOW SLAVE STATUS;
 
