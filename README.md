@@ -89,6 +89,10 @@
    ```bash
    sudo bash ./otus/db_master/script.sh
 
+6. Проверяет статус мастера
+   ```
+   SHOW MASTER STATUS;
+
 ## db_slave
 1. Развернуть VM  на базе образа **ubuntu-24.04.3-live-server-amd64.iso** (20 GB Disk size, 2 Cores CPU, 2048 MiB Memory, vmbr0 Bridge Network)
 
@@ -106,6 +110,10 @@
 5. Запускаем скрипт
    ```bash
    sudo bash ./otus/db_slave/script.sh
+
+6. Проверяет статус мастера
+   ```
+   SHOW SLAVE STATUS;
 
 ## Monitoring prometheus+grafana
 
